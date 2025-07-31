@@ -15,15 +15,15 @@ export default {
       control: 'select',
       options: ['accent', 'orange', 'blue', 'green', 'black', 'red'],
     },
-    color: { control: 'select', options: ['auto', 'dark', 'bright'] },
     small: { control: 'boolean' },
+    dashed: { control: 'boolean' },
     disabled: { control: 'boolean' },
     touchMargin: { control: 'number' },
   },
   render: ({
     type,
     backgroundColor,
-    color,
+    dashed,
     small,
     disabled,
     label,
@@ -45,7 +45,7 @@ export default {
       <uk-button
         .type=${t}
         .backgroundColor=${backgroundColor}
-        .color=${color}
+        .dashed=${dashed}
         .small=${small}
         .disabled=${disabled}
         .touchMargin=${touchMargin}
