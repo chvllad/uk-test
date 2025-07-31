@@ -1,0 +1,6 @@
+src/generated/*
+.clinerules
+.roorules
+.cursorrules
+CLAUDE.md
+AGENTS.md
