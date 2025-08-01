@@ -21,7 +21,7 @@ export default {
         <uk-sidebar-group header="Заявки" open>
           <uk-sidebar-item
             color="#27AE60"
-            @click=${(e: PointerEvent) => console.log('Кнопка нажата!', e)}
+            @click=${() => alert('Кнопка нажата!')}
             >Отклонена управляющим</uk-sidebar-item
           >
           <uk-sidebar-item color="#27AE60" count="2"
