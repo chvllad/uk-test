@@ -26,16 +26,6 @@ export class UkSidebarMenu extends LitElement {
     }
   `;
 
-  #dispatchPress(e: PointerEvent) {
-    e.stopPropagation();
-    this.dispatchEvent(
-      new CustomEvent('press', {
-        bubbles: true,
-        composed: true,
-      }),
-    );
-  }
-
   updated(changedProperties: Map<string, any>) {
     if (changedProperties.has('alignment')) {
       this.style.setProperty('--alignment', this.alignment);
