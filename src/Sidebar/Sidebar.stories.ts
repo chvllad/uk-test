@@ -62,7 +62,20 @@ export default {
         <uk-sidebar-group header="Отключения">
           <uk-sidebar-item color="#27AE60">Первый пункт</uk-sidebar-item>
           <uk-sidebar-item>Второй пункт</uk-sidebar-item>
-          <uk-sidebar-item active>Третий пункт</uk-sidebar-item>
+          <uk-sidebar-item color="#27AE60">Первый пункт</uk-sidebar-item>
+          <uk-sidebar-item>Второй пункт</uk-sidebar-item>
+          <uk-sidebar-item color="#27AE60">Первый пункт</uk-sidebar-item>
+          <uk-sidebar-item>Второй пункт</uk-sidebar-item>
+          <uk-sidebar-item color="#27AE60">Первый пункт</uk-sidebar-item>
+          <uk-sidebar-item>Второй пункт</uk-sidebar-item>
+          <uk-sidebar-item color="#27AE60">Первый пункт</uk-sidebar-item>
+          <uk-sidebar-item>Второй пункт</uk-sidebar-item>
+          <uk-sidebar-item color="#27AE60">Первый пункт</uk-sidebar-item>
+          <uk-sidebar-item>Второй пункт</uk-sidebar-item>
+          <uk-sidebar-item color="#27AE60">Первый пункт</uk-sidebar-item>
+          <uk-sidebar-item>Второй пункт</uk-sidebar-item>
+          <uk-sidebar-item color="#27AE60">Первый пункт</uk-sidebar-item>
+          <uk-sidebar-item>Второй пункт</uk-sidebar-item>
         </uk-sidebar-group>
       </uk-sidebar-menu>
     `;
