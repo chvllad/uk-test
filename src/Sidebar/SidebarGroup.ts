@@ -1,14 +1,5 @@
 import { LitElement, css, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
-import { styleMap } from 'lit/directives/style-map.js';
-
-export enum ButtonType {
-  /** Interface expects user to use this button. */
-  Primary = 0,
-  Secondary = 1,
-  Ternary = 2,
-}
 
 @customElement('uk-sidebar-group')
 export class UkSidebarGroup extends LitElement {
