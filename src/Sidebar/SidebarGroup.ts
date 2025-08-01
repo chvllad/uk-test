@@ -41,6 +41,7 @@ export class UkSidebarGroup extends LitElement {
 
   static styles = css`
     .sidebar-group__items {
+      display: flex;
       flex-direction: column;
       padding-top: 24px;
       row-gap: 10px;
@@ -107,9 +108,7 @@ export class UkSidebarGroup extends LitElement {
         <button @click="${this.toggle}" class="sidebar-group__button">
           ${this.header} ${this.open ? EXPANDED_ICON : COLLAPSED_ICON}
         </button>
-        <div class="sidebar-group__items">
-          <slot></slot>
-        </div>
+        <slot class="sidebar-group__items"></slot>
       </div>
     `;
   }

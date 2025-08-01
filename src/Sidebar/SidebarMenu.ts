@@ -22,6 +22,7 @@ export class UkSidebarMenu extends LitElement {
       padding: 24px 20px;
       width: calc(320px - (var(--padding-x) * 2));
       overflow-y: auto;
+      overflow-x: hidden;
     }
   `;
 

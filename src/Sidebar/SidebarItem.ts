@@ -72,7 +72,7 @@ export class UkSidebarItem extends LitElement {
       style=${styleMap({ '--color': this.color ?? 'currentColor' })}
       @click=${this.#dispatchClick}
     >
-      <span class="sidebar-item__content"><slot></slot></span>
+      <slot class="sidebar-item__content"></slot>
       <span class="sidebar-item__counter">
         ${this.count !== undefined ? `: ${this.count}` : ''}
       </span>
