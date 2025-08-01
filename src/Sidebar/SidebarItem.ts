@@ -29,6 +29,18 @@ export class UkSidebarItem extends LitElement {
       font-size: 12px;
       cursor: pointer;
       transition: opacity var(--uk-animation-time) var(--uk-animation-fn);
+      display: flex;
+    }
+
+    .sidebar-item__content {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: block;
+      white-space: nowrap;
+    }
+
+    .sidebar-item__counter {
+      white-space: nowrap;
     }
 
     :host([active]) .sidebar-item__button {
@@ -60,7 +72,10 @@ export class UkSidebarItem extends LitElement {
       style=${styleMap({ '--color': this.color ?? 'currentColor' })}
       @click=${this.#dispatchClick}
     >
-      <slot></slot>${this.count !== undefined ? `: ${this.count}` : ''}
+      <span class="sidebar-item__content"><slot></slot></span>
+      <span class="sidebar-item__counter">
+        ${this.count !== undefined ? `: ${this.count}` : ''}
+      </span>
     </button>`;
   }
 }

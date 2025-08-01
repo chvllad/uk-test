@@ -25,7 +25,7 @@ export default {
             >Отклонена управляющим</uk-sidebar-item
           >
           <uk-sidebar-item color="#27AE60" count="2"
-            >Отклонена управляющим</uk-sidebar-item
+            >Отклонена управляющим тест длинного заголовка</uk-sidebar-item
           >
           <uk-sidebar-item color="#27AE60" count="0" active
             >Не отправлено</uk-sidebar-item
