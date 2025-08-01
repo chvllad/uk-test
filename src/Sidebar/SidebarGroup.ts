@@ -1,6 +1,36 @@
 import { LitElement, css, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
+const EXPANDED_ICON = html`<svg
+  width="14"
+  height="2"
+  fill="none"
+  viewBox="0 0 14 2"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M1 1L7 0.999999L13 0.999998"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+  />
+</svg>`;
+
+const COLLAPSED_ICON = html`<svg
+  width="14"
+  height="9"
+  viewBox="0 0 14 9"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M1 1L7 7L13 0.999998"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+  />
+</svg>`;
+
 @customElement('uk-sidebar-group')
 export class UkSidebarGroup extends LitElement {
   /** Открыт/закрыт */
@@ -49,12 +79,7 @@ export class UkSidebarGroup extends LitElement {
       border: none;
       padding: 0;
       cursor: pointer;
-      transition:
-        color var(--uk-animation-time) var(--uk-animation-fn),
-        background-color var(--uk-animation-time) var(--uk-animation-fn),
-        border-color var(--uk-animation-time) var(--uk-animation-fn),
-        filter var(--uk-animation-time) var(--uk-animation-fn),
-        opacity var(--uk-animation-time) var(--uk-animation-fn);
+      transition: opacity var(--uk-animation-time) var(--uk-animation-fn);
     }
 
     .sidebar-group__button:hover {
@@ -77,36 +102,6 @@ export class UkSidebarGroup extends LitElement {
   }
 
   render() {
-    const EXPANDED_ICON = html`<svg
-      width="14"
-      height="2"
-      fill="none"
-      viewBox="0 0 14 2"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M1 1L7 0.999999L13 0.999998"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-      />
-    </svg>`;
-
-    const COLLAPSED_ICON = html`<svg
-      width="14"
-      height="9"
-      viewBox="0 0 14 9"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M1 1L7 7L13 0.999998"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-      />
-    </svg>`;
-
     return html`
       <div class="sidebar-group">
         <button @click="${this.toggle}" class="sidebar-group__button">

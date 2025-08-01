@@ -1,14 +1,14 @@
 import { LitElement, css, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { styleMap } from 'lit/directives/style-map.js';
 
 @customElement('uk-sidebar-menu')
 export class UkSidebarMenu extends LitElement {
   /** Выравнивание */
-  @property({ type: String }) alignment: string = 'left';
+  @property({ type: String }) alignment?: string;
 
   static styles = css`
     :host {
-      float: var(--alignment, left);
       display: block;
       background-color: #fff;
     }
@@ -21,20 +21,22 @@ export class UkSidebarMenu extends LitElement {
       row-gap: 24px;
       padding: 24px 20px;
       width: calc(320px - (var(--padding-x) * 2));
-      height: 100svh;
       overflow-y: auto;
     }
   `;
 
-  updated(changedProperties: Map<string, any>) {
-    if (changedProperties.has('alignment')) {
-      this.style.setProperty('--alignment', this.alignment);
-    }
-  }
-
   render() {
     return html`
-      <div class="sidebar-menu">
+      <div
+        class="sidebar-menu"
+        style=${styleMap({
+          position: 'fixed',
+          top: 0,
+          bottom: 0,
+          left: this.alignment !== 'right' ? 0 : 'unset',
+          right: this.alignment === 'right' ? 0 : 'unset',
+        })}
+      >
         <slot></slot>
       </div>
     `;
